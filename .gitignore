@@ -1,0 +1,96 @@
+# Ignore local.lib so that libraries worked on locally won't be tracked
+local.lib
+
+*~
+*.bak
+*.bak.*
+*.orig
+*.orig.*
+
+*.nfs*
+
+core
+
+*.sublime-*
+my*
+mine-*
+
+# Logs
+*.log
+*.LOG
+log_files/*.log*
+log**/*.log*
+*.history
+casLog
+
+# Cadence preferences
+.cadence/dfII/par/1/report.ini
+.cadence/dfII/viva
+.cadence/dfII/ci
+.cadence/dfII/Navigator
+.cadence/dfII/workspaces/**/*.init
+.cadence/dfII/workspaces/**/*.workspace.*
+.cadence/dfII/opc
+.cadence/xstream/
+# Cadence Misc
+*.cdslck*
+.ihdlParamFile
+cdsSession*.save*
+.stimulusFile.auCdl
+xStrmOut_cellMap.txt
+.deftWS
+lefout.list
+
+*Diagnostics
+innovus.*
+
+# Calibre files
+.calibreview
+.calibreviewsetup
+.cgidrcdb
+.cgidfmdb
+.cgilvsdb
+.cgipexdb
+.cgirvedb
+.cgipercdb
+.rvedb
+calibre/runsets/*.runset
+ihnl
+map
+svdb
+netlist
+*.rdb
+*.drc.*
+*.erc.*
+*.lvs.*
+*.pex.*
+*.calibre.*
+*.results*
+*.sp
+si.env
+*.src.net
+drc.summary
+lvs.summary
+_*.cal_
+ERC_results.*
+calibreview.setup
+
+# Batch files
+batch/cell-list.txt
+batch/generated
+batch/streamout
+batch/tapeout/fill/generated
+batch/tapeout/verification/generated
+batch/tapeout/verification/streamout
+batch/tapeout/verification/run_dir
+batch/tapeout/submission
+batch/tapeout/Muse-*-submission
+
+# In newer versions of abstract, ".absract*" files are stored here instead
+# of inside libraries. So, this should be kept in mind if we want to store
+# the abstract options and statuses of libraries in version control some how.
+# Ideally, that would be in a separate folder, though.
+.abstract/
+abstract.*
+dfIIabstract.*
+*.oaread.rpt
