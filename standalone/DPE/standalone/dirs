@@ -1,0 +1,14 @@
+Libraries:
+/research/seneca/RAVENS_TSMC65/LibraryData/stdlib_tsmc65/current/library/stdlib_tsmc65_ccs.lib
+/research/seneca/RAVENS_TSMC65/LibraryData/stdio_tsmc65/current/library/stdio_tsmc65_ccs.lib
+
+LEFs:
+/research/seneca/RAVENS_TSMC65/TechData/tsmc65_tech.lef
+/research/seneca/RAVENS_TSMC65/LibraryData/stdlib_tsmc65/stdlib_tsmc65.lef
+/research/seneca/RAVENS_TSMC65/LibraryData/stdlib_tsmc65/stdlib_tsmc65_filler.lef
+/research/seneca/RAVENS_TSMC65/LibraryData/stdio_tsmc65/stdio_tsmc65.lef
+/research/seneca/RAVENS_TSMC65/LibraryData/analogLib_tsmc65/analogLib_tsmc65.lef
+/research/seneca/RAVENS_TSMC65/LibraryData/switch_matrices/switch_matrices.lef
+/research/seneca/RAVENS_TSMC65/LibraryData/switch_matrices/switch_util.lef
+/research/seneca/RAVENS_TSMC65/LibraryData/switch_matrices/switch_rna_routing.lef
+/research/seneca/RAVENS_TSMC65/LibraryData/analogLib_tsmc65/analogLib_tsmc65.lef 
