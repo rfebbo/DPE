@@ -23,6 +23,7 @@ if {$env(IV_USE_OA)} {
     /research/seneca/RAVENS_10LPe/LibraryData/stdlib_10lpe/stdlib_10lpe.lef        \
     /research/seneca/RAVENS_10LPe/LibraryData/stdlib_10lpe/stdlib_10lpe_filler.lef \
     /research/seneca/RAVENS_10LPe/LibraryData/stdio_10lpe/stdio_10lpe.lef          \
+    /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/sram/sram_lefs-20210609_2349/1kb/sram_arrays-1kb_64x128x32-20210609_2345.lef \ 
   }
 }
 

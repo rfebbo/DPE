@@ -125,6 +125,8 @@ addStripe -switch_layer_over_obs false -snap_wire_center_to_grid None      \
         -padcore_ring_bottom_layer_limit M1 -block_ring_top_layer_limit BB \
         -layer @IV_STRIPE_LAYER@ -nets {@IV_PWR_NETS@ @IV_GND_NETS@}
 
+placeInstance sram 589.1 684 R0 -placed 
+
 ### Power Routing
 setSrouteMode -viaConnectToShape { noshape stripe followpin } -targetNumber { 1 }
 sroute -connect { blockPin padPin padRing corePin floatingStripe }                   \
