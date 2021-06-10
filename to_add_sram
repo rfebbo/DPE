@@ -1,0 +1,8 @@
+placeInstance memcon0/sharedmem/genblk1_icell0 811.8 365.42 R180 -placed
+placeInstance memcon0/sharedmem/genblk1_icell1 1100.97 365.42 MX -placed
+placeInstance memcon0/sharedmem/genblk1_icell2 811.8 684 MY -placed
+placeInstance memcon0/sharedmem/genblk1_icell3 1100.97 684 R0 -placed
+placeInstance memcon0/sharedmem/genblk1_cell0 299.93 365.42 R180 -placed
+placeInstance memcon0/sharedmem/genblk1_cell1 589.1 365.42 MX -placed
+placeInstance memcon0/sharedmem/genblk1_cell2 299.93 684 MY -placed
+placeInstance memcon0/sharedmem/genblk1_cell3 589.1 684 R0 -placed 

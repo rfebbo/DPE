@@ -1,13 +1,14 @@
-DPE/standalone/DPE_vsim/DPE.cr.mti
-DPE/standalone/DPE_vsim/*.wlf
-DPE/standalone/DPE_vsim/*.nfs*
-DPE/standalone/DPE_vsim/transcript
-DPE/standalone/DPE_vsim/rocco_CSA
-DPE/standalone/DPE_vsim/work
+standalone/DPE/DPE_vsim/DPE.cr.mti
+standalone/DPE/DPE_vsim/*.wlf
+standalone/DPE/DPE_vsim/*.nfs*
+standalone/DPE/DPE_vsim/transcript
+standalone/DPE/DPE_vsim/rocco_CSA
+standalone/DPE/DPE_vsim/work
 *.pvl
 *.mr
 *.syn
 *.svf
 *.alib
 *.log
+gen-syn+pnr/*
 
