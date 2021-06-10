@@ -30,9 +30,7 @@ module DPE( // Inputs
     wire [SC_DPE_OUT_WIDTH-1:0]DATAoutp;
     wire [5:0]DATAout;
     wire EN;
-    wire ParEN;
-
-    
+    wire ParEN;    
     
     //MSB is the circuit enable
     assign EN = DATA[SC_DPE_IN_WIDTH];
@@ -56,7 +54,7 @@ module DPE( // Inputs
     logic sense_enb;
 
     //SRAM
-    sram_compiled_array sram(.addr0(addr[0]), .addr1(addr[1]), .addr2(addr[2]), .addr3(addr[3]),
+    sram_1kb_64x128x32 sram(.addr0(addr[0]), .addr1(addr[1]), .addr2(addr[2]), .addr3(addr[3]),
     .addr4(addr[4]), .addr5(addr[5]), .addr6(addr[6]), .addr7(addr[7]),
     .din0(data_in[0]), .din1(data_in[1]), .din2(data_in[2]), .din3(data_in[3]), .din4(data_in[4]),
     .din5(data_in[5]), .din6(data_in[6]), .din7(data_in[7]), .din8(data_in[8]), .din9(data_in[9]),
@@ -319,7 +317,7 @@ module DPE( // Inputs
                                         values[i] <= {regs[rank_start + i*2 + 1],regs[rank_start + i*2]};
                                     end
                                 end
-                                sorting: begin //slow bubble sort :`(
+                                sorting: begin //slow bubble sort that does not work :`(
                                     r_state <= done;
                                     // for (int i = 0; i < OUTPUT_VEC_LEN-1; i=i+1) begin 
                                     // // this assumes OUT_WIDTH/WIDTH = 2

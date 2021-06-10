@@ -10,5 +10,5 @@ standalone/DPE/DPE_vsim/work
 *.svf
 *.alib
 *.log
-gen-syn+pnr/*
+gen-syn+pnr/generated
 

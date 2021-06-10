@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# List the files/top level designs to process. Name should be "<top level design (from file)>.sv"
+export DESIGNS_TO_RUN="
+DPE
+"

@@ -1,0 +1,8 @@
+
+set CLK_FREQ_MHZ $env(DC_CLK_FREQ)
+set CLK_PERIOD [expr 1000.0 / $CLK_FREQ_MHZ]
+set CLK_INPUT $env(DC_CLK_NETS)
+set CLK_DELAY [expr .010*$CLK_PERIOD]
+set CLK_SKEW [expr .010*$CLK_PERIOD]
+set TR $env(DC_TRISE)
+set TF $env(DC_TFALL)
