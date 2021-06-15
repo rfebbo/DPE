@@ -11,7 +11,7 @@ module DPE_tb();
     logic RESETn; //Global reset
     // Outputs
     logic scanOut;    // scan output
-    DPE dpe(scanIn, CLK, SC_CLK, SC_EN, RESETn, scanOut);
+    DPE dpe(.scanIn(scanIn), .CLK(CLK), .SC_CLK(SC_CLK), .SC_EN(SC_EN), .RESETn(RESETn), .scanOut(scanOut));
 
     //1Kb SRAM emulator 128x64
     logic [255:0][SRAM_WORD_LENGTH-1:0] ram;
@@ -19,6 +19,7 @@ module DPE_tb();
     int pc; //programming counter
 
     always #5 CLK = ~CLK;
+    always #125 SC_CLK = ~SC_CLK;
 
     // always begin
     //     #2 data_in <= ram[addr];
@@ -29,10 +30,11 @@ module DPE_tb();
 
     initial begin
         CLK = 0;
+        SC_CLK = 0;
         RESETn = 0;
         ram = 0;
         SC_EN = 0;
-        #20;
+        #500;
         RESETn = 1;
 
         //set some memory
@@ -106,31 +108,31 @@ module DPE_tb();
         for (logic[SRAM_ADDR_WIDTH-1:0] i = 0; i < 'h90; i++) begin
             for (int j = 0; j < SRAM_WORD_LENGTH; j++) begin
                 scanIn = ram[i][j]; // data
-                #10;
+                #250;
             end
             for (int j = 0; j < SRAM_ADDR_WIDTH; j++) begin
                 scanIn <= i[j]; //address
-                #10;
+                #250;
             end
 
             scanIn = 1;
             SC_EN = 1;
-            #10;
+            #250;
             SC_EN = 0;
         end
 
         //send FFFFFFFFFF signal to DPE to signify the end of INIT
         for (int j = 0; j < SRAM_WORD_LENGTH; j++) begin
             scanIn = 1;
-            #10;
+            #250;
         end
         for (int j = 0; j < SRAM_ADDR_WIDTH; j++) begin
             scanIn <= 1;
-            #10;
+            #250;
         end
         scanIn = 1;
         SC_EN = 1;
-        #10;
+        #250;
         SC_EN = 0;
     end
 endmodule

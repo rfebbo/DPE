@@ -28,7 +28,7 @@ module DPE( // Inputs
     wire [SC_DPE_IN_WIDTH:0]DATA; // Circuit EN (1-bit) + 32 bits per sram word + 8 bits per sram address
     wire [SC_DPE_IN_WIDTH-1:0]DATAinp;
     wire [SC_DPE_OUT_WIDTH-1:0]DATAoutp;
-    wire [5:0]DATAout;
+    wire [SC_DPE_OUT_WIDTH-1:0]DATAout;
     wire EN;
     wire ParEN;    
     
@@ -147,6 +147,7 @@ module DPE( // Inputs
             case (s)
                 INIT: begin
                     write_en <= 1; //active high
+                    sense_enb <= 1; //active low
                     if (ParEN) begin
                         if (DATAinp == 'hFFFFFFFFFF) begin
                             s <= FETCH;
@@ -154,8 +155,8 @@ module DPE( // Inputs
                         end
                         else begin
                             //write data to sram
-                            data_in <= DATAinp[SRAM_ADDR_WIDTH-1:0];
-                            addr <= DATAinp[SRAM_ADDR_WIDTH-1:0];
+                            data_in <= DATAinp[SRAM_WORD_LENGTH-1:0];
+                            addr <= DATAinp[SC_DPE_IN_WIDTH-1:SRAM_WORD_LENGTH];
 
                         end
                     end
