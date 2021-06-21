@@ -1,0 +1,2426 @@
+# //  Questa Sim-64
+# //  Version 2020.3 linux_x86_64 Jul 12 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project DPE_cmos10lpe
+# Compile of DPE.sv was successful.
+# Compile of DPE_params.sv was successful.
+# Compile of CSA_8.sv was successful with warnings.
+# Compile of RCA.sv was successful.
+# Compile of FA.sv was successful.
+# Compile of spike_MAC.sv was successful with warnings.
+# Compile of spike_MAC_pip.sv was successful with warnings.
+# Compile of spike_MAC_wrapper.sv was successful.
+# Compile of DPE_tb.sv was successful.
+# Compile of spike_MAC_tb.sv was successful.
+# Compile of spike_MAC_wrapper_tb.sv was successful.
+# Compile of CSA_8_tb.sv was successful.
+# Compile of RCA_tb.sv was successful.
+# Compile of RegPLoad.sv was successful.
+# Compile of ShiftRegN.sv was successful.
+# Compile of ShiftRegPLoad.sv was successful.
+# Compile of INVC.v was successful.
+# Compile of INVD.v was successful.
+# Compile of inverter_compiler.v was successful.
+# Compile of muxTrans.v was successful.
+# Compile of NANDC.v was successful.
+# Compile of precharge_compiler.v was successful.
+# Compile of sense_amp_clocked_compiler.v was successful.
+# Compile of sram_2kb_128x128x32.v was successful.
+# Compile of sram_cell_6t_5.v was successful.
+# Compile of write_driver_compiler.v was successful.
+# Compile of INVC.v was successful.
+# Compile of INVD.v was successful.
+# Compile of inverter_compiler.v was successful.
+# Compile of muxTrans.v was successful.
+# Compile of NANDC.v was successful.
+# Compile of precharge_compiler.v was successful.
+# Compile of sense_amp_clocked_compiler.v was successful.
+# Compile of sram_1kb_64x128x32.v was successful.
+# Compile of sram_cell_6t_5.v was successful.
+# Compile of write_driver_compiler.v was successful.
+# Compile of spi_slave.v was successful.
+# Compile of spi_master.sv was successful.
+# Compile of spi_slave_tb.sv was successful.
+# 39 compiles, 0 failed with no errors.
+# Load canceled
+vsim work.DPE_tb
+# vsim work.DPE_tb 
+# Start time: 17:37:33 on Jun 19,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/CSA/CSA_8.sv(7): (vopt-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/MAC/spike_MAC.sv(5): (vopt-13314) Defaulting port 'matrix' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/DPE_tb.sv(17): (vopt-2685) [TFMPC] - Too few port connections for 'dpe'.  Expected 10, found 6.
+# ** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/DPE_tb.sv(17): (vopt-2718) [TFMPC] - Missing connection for port 'i_SPI_CS_n'.
+# ** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/DPE_tb.sv(17): (vopt-2718) [TFMPC] - Missing connection for port 'i_SPI_MOSI'.
+# ** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/DPE_tb.sv(17): (vopt-2718) [TFMPC] - Missing connection for port 'o_SPI_MISO'.
+# ** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/DPE_tb.sv(17): (vopt-2718) [TFMPC] - Missing connection for port 'i_SPI_Clk'.
+# ** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/DPE_tb.sv(45): (vopt-2958) Implicit wire 'r_Rst_L' does not have any driver.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=8.
+# Loading sv_std.std
+# Loading work.RCA_sv_unit(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.rowDecoder(fast)
+# Compile of DPE_tb.sv failed with 4 errors.
+# Compile of DPE_tb.sv failed with 1 errors.
+# Compile of DPE_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/CSA/CSA_8.sv(7): (vopt-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/MAC/spike_MAC.sv(5): (vopt-13314) Defaulting port 'matrix' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/DPE_tb.sv(49): (vopt-2958) Implicit wire 'r_Rst_L' does not have any driver.
+# ** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/DPE_tb.sv(50): (vopt-2958) Implicit wire 'Clk' does not have any driver.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading sv_std.std
+# Loading work.RCA_sv_unit(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.rowDecoder(fast)
+# Compile of DPE_tb.sv failed with 1 errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading work.RCA_sv_unit(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.rowDecoder(fast)
+# Compile of DPE_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/CSA/CSA_8.sv(7): (vopt-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/MAC/spike_MAC.sv(5): (vopt-13314) Defaulting port 'matrix' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading sv_std.std
+# Loading work.RCA_sv_unit(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.rowDecoder(fast)
+vsim work.DPE_tb -voptargs=+acc
+# End time: 17:43:23 on Jun 19,2021, Elapsed time: 0:05:50
+# Errors: 0, Warnings: 3
+# vsim work.DPE_tb -voptargs="+acc" 
+# Start time: 17:43:23 on Jun 19,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 6 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+add wave -position end  sim:/DPE_tb/dpe/CLK
+add wave -position end  sim:/DPE_tb/dpe/SC_CLK
+add wave -position end  sim:/DPE_tb/dpe/SC_EN
+add wave -position end  sim:/DPE_tb/dpe/RESETn
+add wave -position end  sim:/DPE_tb/dpe/i_SPI_Clk
+add wave -position end  sim:/DPE_tb/dpe/o_SPI_MISO
+add wave -position end  sim:/DPE_tb/dpe/i_SPI_MOSI
+add wave -position end  sim:/DPE_tb/dpe/i_SPI_CS_n
+add wave -position end  sim:/DPE_tb/dpe/DATAinp
+add wave -position end  sim:/DPE_tb/dpe/DATAoutp
+add wave -position end  sim:/DPE_tb/dpe/ParEN
+add wave -position end  sim:/DPE_tb/dpe/data_in
+add wave -position end  sim:/DPE_tb/dpe/data_out
+add wave -position end  sim:/DPE_tb/dpe/addr
+add wave -position end  sim:/DPE_tb/dpe/o_RX_Byte
+add wave -position end  sim:/DPE_tb/dpe/inst
+# Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: rfebbo  Hostname: seneca1.eecs.utk.edu  ProcessID: 30443
+#           Attempting to use alternate WLF file "./wlft143yPb".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft143yPb
+run 732 us
+# Can't move the Now cursor.
+run 100us
+# Compile of DPE.sv was successful.
+# Compile of DPE_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 6 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 736us
+run 100ns
+run 100ns
+run 100ns
+run 100ns
+run 100ns
+run 100ns
+run 100ns
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 6 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 736.6us
+add wave -position end  sim:/DPE_tb/r_Master_RX_Byte
+add wave -position end  sim:/DPE_tb/r_Master_RX_DV
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 736.6us
+add wave -position 14  sim:/DPE_tb/dpe/o_RX_DV
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 736.6us
+# Causality operation skipped due to absence of debug database file
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Compile of DPE.sv was successful.
+# Compile of DPE_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 6 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 736.5us
+run .5us
+# Compile of DPE.sv was successful.
+# Compile of DPE_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 6 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 737us
+# Compile of DPE_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 6 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 737 us
+# Compile of DPE_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 6 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 737 us
+# Compile of DPE_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 6 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 737 us
+run 1us
+add wave -position end  sim:/DPE_tb/dpe/i_TX_Byte
+add wave -position end  sim:/DPE_tb/dpe/i_TX_DV
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 1us
+run 737 us
+# Compile of DPE.sv failed with 2 errors.
+# Compile of DPE_tb.sv was successful.
+# 2 compiles, 1 failed with 2 errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 6 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 737 us
+add wave -position 14  sim:/DPE_tb/dpe/write_en
+add wave -position 15  sim:/DPE_tb/dpe/sense_enb
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 737 us
+add wave -position end  sim:/DPE_tb/dpe/TX
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 738 us
+run 1us
+# Compile of DPE.sv failed with 1 errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 738 us
+# Compile of DPE.sv failed with 1 errors.
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 738 us
+run 2us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 738 us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 738 us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 738 us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 738 us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 738 us
+# Compile of DPE.sv was successful.
+# Compile of DPE_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 738 us
+# Compile of DPE.sv was successful.
+# Compile of DPE_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 738 us
+add wave -position end  sim:/DPE_tb/dpe/c_count
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 738 us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 738 us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 738 us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 738 us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 738 us
+run 2us
+# Compile of DPE.sv was successful.
+# Compile of DPE_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+run 738 us
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 738 us
+run 2us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 740us us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 740us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 740us
+# Compile of DPE_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 740us
+run 1us
+# Compile of DPE.sv was successful.
+# Compile of spi_slave.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 740us
+add wave -position end  sim:/DPE_tb/dpe/r_TX_Bit_Count
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 740us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 740us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 740us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 740us
+# Compile of DPE.sv was successful.
+# Compile of spi_slave.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+# Warning in wave window restart: (vish-4014) No objects found matching '/DPE_tb/dpe/r_TX_Bit_Count'. 
+run 740us
+# Compile of DPE.sv failed with 3 errors.
+# Compile of DPE.sv failed with 1 errors.
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 8 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+# Warning in wave window restart: (vish-4014) No objects found matching '/DPE_tb/dpe/c_count'. 
+run 740us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 8 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 740us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 8 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 740us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 8 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 740us
+# Compile of DPE.sv failed with 6 errors.
+# Compile of DPE_tb.sv was successful.
+# 2 compiles, 1 failed with 6 errors.
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 740us
+# Compile of DPE_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 740us
+add wave -position end  sim:/DPE_tb/dpe/RX
+add wave -position end  sim:/DPE_tb/dpe/tx_state
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 740us
+add wave -position end  sim:/DPE_tb/dpe/rx_state
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 740us
+run 1us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 742us
+run -over
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 743us
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 743us
+# Break key hit
+# Break in Module sram_cell_6t_5 at /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/sram/verilog_model/sram_1kb_64x128x32/sram_cell_6t_5.v line 16
+# Compile of DPE.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 743us
+add wave -position end  sim:/DPE_tb/dpe/m_out
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 743us
+add wave -position 27  sim:/DPE_tb/dpe/m_spikes
+add wave -position 28  sim:/DPE_tb/dpe/m_matrix
+restart -f
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 743us
+# Compile of DPE_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 743us
+# Compile of DPE_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 743us
+# Compile of DPE.sv was successful.
+# Compile of DPE_tb.sv was successful.
+# 2 compiles, 0 failed with no errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 743us
+# Compile of DPE_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 743us
+run 1us
+run 1us
+# Compile of DPE_tb.sv was successful.
+run 743us
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 7 FSMs in module "DPE(fast)".
+# Loading sv_std.std
+# Loading work.DPE_tb_sv_unit(fast)
+# Loading work.DPE_tb(fast)
+# Loading work.DPE_sv_unit(fast)
+# Loading work.DPE(fast)
+# Loading work.ShiftRegN(fast)
+# Loading work.RegPLoad(fast)
+# Loading work.ShiftRegPLoad(fast)
+# Loading work.SPI_Slave(fast)
+# Loading work.sram_1kb_64x128x32(fast)
+# Loading work.inverter_compiler(fast)
+# Loading work.invRow(fast)
+# Loading work.INVD(fast)
+# Loading work.invCol(fast)
+# Loading work.rowDecoder(fast)
+# Loading work.NANDC2x1(fast)
+# Loading work.INVC(fast)
+# Loading work.colDecoder(fast)
+# Loading work.sram_cell_6t_5(fast)
+# Loading work.columnMux(fast)
+# Loading work.muxTrans(fast)
+# Loading work.write_driver_compiler(fast)
+# Loading work.sense_amp_clocked_compiler(fast)
+# Loading work.precharge_compiler(fast)
+# Loading work.spike_MAC_sv_unit(fast)
+# Loading work.spike_MAC(fast)
+# Loading work.CSA_8_sv_unit(fast)
+# Loading work.CSA_8(fast)
+# Loading work.RCA_sv_unit(fast)
+# Loading work.RCA(fast)
+# Loading work.FA(fast)
+# Loading work.SPI_Master(fast)
+run 743us

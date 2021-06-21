@@ -25,7 +25,8 @@ if {$env(IV_USE_OA)} {
     /research/seneca/RAVENS_10LPe/LibraryData/stdlib_10lpe/stdlib_10lpe_filler.lef \
     /research/seneca/RAVENS_10LPe/LibraryData/stdio_10lpe/stdio_10lpe.lef          \
     # /research/seneca/RAVENS_10LPe/LibraryData/sram_arrays/sram_1kb_64x128x32.lef   \
-    /research/seneca/RAVENS_10LPe/testing_lefs/sram-1kb/sram_arrays-1kb_64x128x32-20210616-test_1.lef \
+    # /research/seneca/RAVENS_10LPe/testing_lefs/sram-1kb/sram_arrays-1kb_64x128x32-20210616-test_1.lef \
+    /research/seneca/RAVENS_10LPe/testing_lefs/sram-1kb/sram_arrays-1kb_64x128x32-20210616-test_2.lef \
     /research/seneca/RAVENS_10LPe/LibraryData/sram_arrays/sram_2kb_128x128x32.lef  \
     /research/seneca/RAVENS_10LPe/LibraryData/sram_arrays/sram_4kb_256x128x8.lef   \
   }

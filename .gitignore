@@ -1,3 +1,5 @@
+
+# Questasim files
 standalone/DPE/DPE_vsim/DPE.cr.mti
 standalone/DPE/DPE_vsim/*.wlf
 standalone/DPE/DPE_vsim/*.nfs*
@@ -10,5 +12,10 @@ standalone/DPE/DPE_vsim/work
 *.svf
 *.alib
 *.log
-gen-syn+pnr/generated
 
+# gen-syn+pnr generated files
+gen-syn+pnr/generated
+gen-syn+pnr/work/innovus.logv
+gen-syn+pnr/work/innovus.cmd
+gen-syn+pnr/work/DPE.geom.rpt
+gen-syn+pnr/work/DPE.conn.rpt

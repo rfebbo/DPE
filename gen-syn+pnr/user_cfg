@@ -94,10 +94,10 @@ export IV_STRIPE_LAYER="BB"
 export IV_STRIPE_BOT_VIA_LAYER="M1"
 export IV_STRIPE_TOP_VIA_LAYER="BB"
 # Power stripe starting offset, set-to-set distance, width, and spacing
-export IV_STRIPE_OFFSET="150"
-export IV_STRIPE_DIST="150"
-export IV_STRIPE_WIDTH="10"
-export IV_STRIPE_SPACE="10"
+export IV_STRIPE_OFFSET="242"
+export IV_STRIPE_DIST="242"
+export IV_STRIPE_WIDTH="5"
+export IV_STRIPE_SPACE="5"
 
 # Which layer range nanoroute should use
 export IV_TOP_NR_LAYER="5"
@@ -105,7 +105,7 @@ export IV_BOT_NR_LAYER="1"
 
 ### Settings for CTS ###
 # Whether or not to skip CTS in Innovus script
-export IV_SKIP_CTS="0"
+export IV_SKIP_CTS="1"
 
 # If set to 1, the "override_minimum_max_trans_target" property will
 # be set to avoid IMPCCOPT-1013
