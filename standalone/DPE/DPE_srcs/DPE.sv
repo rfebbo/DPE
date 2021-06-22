@@ -4,18 +4,18 @@
 
 typedef enum logic [3:0] {LD, ST, MUL, JMP, RANK, IDLE} instruction;
 
-typedef enum {INIT, FETCH, DECODE, EXECUTE, COMM} CPU_STATE;
+typedef enum logic [1:0] {INIT, FETCH, DECODE, EXECUTE} CPU_STATE;
 
-typedef enum {fe_enable, fe_read} fetch_state;
+typedef enum logic {fe_enable, fe_read} fetch_state;
 
-typedef enum {tx_wait, tx_read, tx_send, tx_incr} TX_state;
-typedef enum {rx_wait, rx_wait_d, rx_write, rx_finish} RX_state;
+typedef enum logic [1:0] {tx_wait, tx_read, tx_send, tx_incr} TX_state;
+typedef enum logic [1:0] {rx_wait, rx_wait_d, rx_write, rx_finish} RX_state;
 
 //states for each instruction
-typedef enum {ld_enable, ld_read} ld_state;
-typedef enum {st_enable, st_write} st_state;
-typedef enum {set, get} mul_state;
-typedef enum { copy, sorting, swapping, done } rank_state;
+typedef enum logic {ld_enable, ld_read} ld_state;
+typedef enum logic {st_enable, st_write} st_state;
+typedef enum logic {set, get} mul_state;
+typedef enum logic [1:0] { copy, sorting, swapping, done } rank_state;
 
 module DPE
   #(parameter SPI_MODE = 0)
