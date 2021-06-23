@@ -129,7 +129,7 @@ globalNetConnect @IV_GND_CORE@ -type pgpin -pin VSS     -instanceBasename * -hie
 globalNetConnect @IV_PWR_CORE@ -type tiehi
 globalNetConnect @IV_GND_CORE@ -type tielo
 
-placeInstance sram 519.86 42.84 R0 -placed 
+placeInstance sram 519.86 38.08 R0 -placed 
 
 ### Power Ring Creation
 setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0    \

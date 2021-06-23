@@ -179,6 +179,7 @@ module DPE_tb();
         pc++;
 
 
+        //start actually scanning in the values that are in the ram variable over the scanchain
         for (logic[SRAM_ADDR_WIDTH-1:0] i = 0; i <= 'h30; i++) begin
             for (int j = 0; j < SRAM_WORD_LENGTH; j++) begin
                 scanIn = ram[i][j]; // data
@@ -212,18 +213,24 @@ module DPE_tb();
         #350;
         SC_EN = 1;
 
+
+        //let the program run on the dpe
         #1200;
-        SendSingleByte(8'h00);
-        SendSingleByte(8'h00); //0
-        SendSingleByte(8'h00); //1
-        SendSingleByte(8'h00); //2
-        SendSingleByte(8'h00); //3
-        SendSingleByte(8'h01);
-        SendSingleByte(8'h21);
-        SendSingleByte(8'haa);
-        SendSingleByte(8'haa);
-        SendSingleByte(8'haa);
-        SendSingleByte(8'haa);
+
+        //test SPI send and receive
+        SendSingleByte(8'h00); //read code
+        SendSingleByte(8'h00); //0 //address we want to read (0 for rcv first byte)
+        SendSingleByte(8'h00); //1 rcv second byte
+        SendSingleByte(8'h00); //2 rcv third byte
+        SendSingleByte(8'h00); //3 rcv fourth byte
+        SendSingleByte(8'h01); //write code
+        SendSingleByte(8'h21); //address to write
+        SendSingleByte(8'haa); //first byte
+        SendSingleByte(8'haa); //second byte
+        SendSingleByte(8'haa); //third byte
+        SendSingleByte(8'haa); //fourth byte
+
+        //run this tb for 740us 
         
     end
 endmodule

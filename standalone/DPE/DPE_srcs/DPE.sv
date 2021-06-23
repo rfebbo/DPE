@@ -38,7 +38,7 @@ module DPE
     //scan chain signals
     wire [SC_DPE_IN_WIDTH:0]DATA; // Circuit EN (1-bit) + 32 bits per sram word + 8 bits per sram address
     wire [SC_DPE_IN_WIDTH-1:0]DATAinp;
-    wire [SC_DPE_OUT_WIDTH-1:0]DATAoutp;
+    wire [SC_DPE_OUT_WIDTH-1:0]DATAoutp; //the entire register stack 1024 bits
     wire [SC_DPE_OUT_WIDTH-1:0]DATAout;
     wire EN;
     wire ParEN;    
