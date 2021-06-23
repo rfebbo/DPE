@@ -105,7 +105,7 @@ export IV_BOT_NR_LAYER="1"
 
 ### Settings for CTS ###
 # Whether or not to skip CTS in Innovus script
-export IV_SKIP_CTS="1"
+export IV_SKIP_CTS="0"
 
 # If set to 1, the "override_minimum_max_trans_target" property will
 # be set to avoid IMPCCOPT-1013
