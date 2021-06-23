@@ -1,14 +1,4 @@
-/home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/MAC/spike_MAC_pip.sv {2 {vlog -work work -vopt -sv -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/MAC/spike_MAC_pip.sv
-QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
-** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/MAC/spike_MAC_pip.sv(5): (vlog-13314) Defaulting port 'matrix' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
--- Compiling package spike_MAC_pip_sv_unit
--- Compiling module spike_MAC_pip
-** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/MAC/spike_MAC_pip.sv(5): (vlog-13314) Defaulting port 'matrix' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-
-Top level modules:
-	spike_MAC_pip
-
-} {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/sram/verilog_model/sram_1kb_64x128x32/sram_1kb_64x128x32.v {1 {vlog -work work -vopt -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/sram/verilog_model/sram_1kb_64x128x32/sram_1kb_64x128x32.v
+/home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/sram/verilog_model/sram_1kb_64x128x32/sram_1kb_64x128x32.v {1 {vlog -work work -vopt -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/sram/verilog_model/sram_1kb_64x128x32/sram_1kb_64x128x32.v
 QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
 -- Compiling module invRow
 -- Compiling module invCol
@@ -55,28 +45,6 @@ QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
 Top level modules:
 	INVC
 
-} {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/DPE_tb.sv {1 {vlog -work work -vopt -sv -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/DPE_tb.sv
-QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
--- Compiling package DPE_tb_sv_unit
--- Compiling module DPE_tb
-
-Top level modules:
-	DPE_tb
-
-} {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/scanchain/ShiftRegN.sv {1 {vlog -work work -vopt -sv -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/scanchain/ShiftRegN.sv
-QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
--- Compiling module ShiftRegN
-
-Top level modules:
-	ShiftRegN
-
-} {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/CSA/RCA/RCA_tb.sv {1 {vlog -work work -vopt -sv -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/CSA/RCA/RCA_tb.sv
-QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
--- Compiling module RCA_tb
-
-Top level modules:
-	RCA_tb
-
 } {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/sram/verilog_model/sram_2kb_128x128x32/sense_amp_clocked_compiler.v {1 {vlog -work work -vopt -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/sram/verilog_model/sram_2kb_128x128x32/sense_amp_clocked_compiler.v
 QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
 -- Compiling module sense_amp_clocked_compiler
@@ -90,13 +58,6 @@ QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
 
 Top level modules:
 	INVD
-
-} {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/CSA/RCA/FA/FA.sv {1 {vlog -work work -vopt -sv -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/CSA/RCA/FA/FA.sv
-QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
--- Compiling module FA
-
-Top level modules:
-	FA
 
 } {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/sram/verilog_model/sram_2kb_128x128x32/muxTrans.v {1 {vlog -work work -vopt -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/sram/verilog_model/sram_2kb_128x128x32/muxTrans.v
 QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
@@ -124,21 +85,6 @@ QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
 Top level modules:
 	sram_2kb_128x128x32
 
-} {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/CSA/RCA/RCA.sv {1 {vlog -work work -vopt -sv -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/CSA/RCA/RCA.sv
-QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
--- Compiling package RCA_sv_unit
--- Compiling module RCA
-
-Top level modules:
-	RCA
-
-} {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/spi/spi_master.sv {1 {vlog -work work -vopt -sv -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/spi/spi_master.sv
-QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
--- Compiling module SPI_Master
-
-Top level modules:
-	SPI_Master
-
 } {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/sram/verilog_model/sram_2kb_128x128x32/NANDC.v {1 {vlog -work work -vopt -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/sram/verilog_model/sram_2kb_128x128x32/NANDC.v
 QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
 -- Compiling module NANDC2x1
@@ -152,41 +98,6 @@ QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
 
 Top level modules:
 	sram_cell_6t_5
-
-} {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/DPE_params.sv {1 {vlog -work work -vopt -sv -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/DPE_params.sv
-QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
--- Compiling package DPE_params_sv_unit
-
-Top level modules:
-	--none--
-
-} {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/CSA/CSA_8.sv {2 {vlog -work work -vopt -sv -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/CSA/CSA_8.sv
-QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
-** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/CSA/CSA_8.sv(7): (vlog-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
--- Compiling package CSA_8_sv_unit
--- Compiling module CSA_8
-** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/CSA/CSA_8.sv(7): (vlog-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-
-Top level modules:
-	CSA_8
-
-} {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/MAC/spike_MAC.sv {2 {vlog -work work -vopt -sv -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/MAC/spike_MAC.sv
-QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
-** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/MAC/spike_MAC.sv(5): (vlog-13314) Defaulting port 'matrix' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
--- Compiling package spike_MAC_sv_unit
--- Compiling module spike_MAC
-** Warning: /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/MAC/spike_MAC.sv(5): (vlog-13314) Defaulting port 'matrix' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
-
-Top level modules:
-	spike_MAC
-
-} {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/MAC/spike_MAC_wrapper.sv {1 {vlog -work work -vopt -sv -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_srcs/MAC/spike_MAC_wrapper.sv
-QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
--- Compiling package spike_MAC_wrapper_sv_unit
--- Compiling module spike_MAC_wrapper
-
-Top level modules:
-	spike_MAC_wrapper
 
 } {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/sram/verilog_model/sram_1kb_64x128x32/INVC.v {1 {vlog -work work -vopt -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/sram/verilog_model/sram_1kb_64x128x32/INVC.v
 QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
@@ -223,13 +134,6 @@ QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
 Top level modules:
 	muxTrans
 
-} {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/spi/spi_slave_tb.sv {1 {vlog -work work -vopt -sv -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/spi/spi_slave_tb.sv
-QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
--- Compiling module SPI_Slave_TB
-
-Top level modules:
-	SPI_Slave_TB
-
 } {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/sram/verilog_model/sram_2kb_128x128x32/inverter_compiler.v {1 {vlog -work work -vopt -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/sram/verilog_model/sram_2kb_128x128x32/inverter_compiler.v
 QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
 -- Compiling module inverter_compiler
@@ -250,43 +154,5 @@ QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
 
 Top level modules:
 	NANDC2x1
-
-} {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/scanchain/ShiftRegPLoad.sv {1 {vlog -work work -vopt -sv -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/scanchain/ShiftRegPLoad.sv
-QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
--- Compiling module ShiftRegPLoad
-
-Top level modules:
-	ShiftRegPLoad
-
-} {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/MAC/spike_MAC_tb.sv {1 {vlog -work work -vopt -sv -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/MAC/spike_MAC_tb.sv
-QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
--- Compiling package spike_MAC_tb_sv_unit
--- Compiling module spike_MAC_tb
-
-Top level modules:
-	spike_MAC_tb
-
-} {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/MAC/spike_MAC_wrapper_tb.sv {1 {vlog -work work -vopt -sv -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/MAC/spike_MAC_wrapper_tb.sv
-QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
--- Compiling package spike_MAC_wrapper_tb_sv_unit
--- Compiling module spike_MAC_wrapper_tb
-
-Top level modules:
-	spike_MAC_wrapper_tb
-
-} {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/CSA/CSA_8_tb.sv {1 {vlog -work work -vopt -sv -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/DPE_sims/CSA/CSA_8_tb.sv
-QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
--- Compiling package CSA_8_tb_sv_unit
--- Compiling module CSA_8_tb
-
-Top level modules:
-	CSA_8_tb
-
-} {} {}} /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/scanchain/RegPLoad.sv {1 {vlog -work work -vopt -sv -stats=none /home/rfebbo/cadence/ravens/cmos10lpe_srcs/standalone/DPE/scanchain/RegPLoad.sv
-QuestaSim-64 vlog 2020.3 Compiler 2020.07 Jul 12 2020
--- Compiling module RegPLoad
-
-Top level modules:
-	RegPLoad
 
 } {} {}}

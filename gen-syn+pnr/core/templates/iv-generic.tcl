@@ -70,6 +70,45 @@ floorPlan -site CoreSite -r @IV_DES_ASPECT@ @IV_DES_DENSITY@ @IV_DES_MARGIN_LEFT
 
 addHaloToBlock 14.28 14.28 14.28 14.28 -allBlock
 
+### Move Pins
+# SPI left, UART top, scan x2 top,
+# scan x2 right, reset & clk right
+# Global Clock & Reset (right)
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.18 -pinDepth 0.34 -fixedPin 1 \
+  -fixOverlap 1 -unit MICRON -spreadDirection clockwise \
+  -layer M2 -spreadType center -spacing 4.76 -side Top \
+  -snap TRACK -pin { \
+    {scanIn} {scanOut} \
+  }
+editPin -pinWidth 0.18 -pinDepth 0.34 -fixedPin 1 \
+  -fixOverlap 1 -unit MICRON -spreadDirection clockwise \
+  -layer M2 -spreadType center -spacing 4.76 -side Right \
+  -snap TRACK -pin { \
+    {CLK} {RESETn} {SC_EN} {SC_CLK} \
+  }
+editPin -pinWidth 0.18 -pinDepth 0.34 -fixedPin 1 \
+  -fixOverlap 1 -unit MICRON -spreadDirection clockwise \
+  -layer M2 -spreadType center -spacing 4.76 -side Left \
+  -snap TRACK -pin { \
+    {o_SPI_MISO} {i_SPI_MOSI} {i_SPI_CS_n} {i_SPI_Clk} \
+  }
+setPinAssignMode -pinEditInBatch false
+
+#             input scanIn, // scan inputs
+#             input CLK, // Clock signal
+#             input SC_CLK, //scan clock
+#             input SC_EN, //Scan Enable
+#             input RESETn, //Global reset
+#             // Outputs
+#             output scanOut,    // scan output
+
+#             // SPI Interface
+#             input      i_SPI_Clk,
+#             output     o_SPI_MISO,
+#             input      i_SPI_MOSI,
+#             input      i_SPI_CS_n
+
 ### Connect global nets 
 globalNetConnect @IV_PWR_CORE@ -type pgpin -pin vdd!    -instanceBasename * -hierarchicalInstance {} -override
 globalNetConnect @IV_PWR_CORE@ -type pgpin -pin \\vdd!  -instanceBasename * -hierarchicalInstance {} -override
@@ -90,6 +129,8 @@ globalNetConnect @IV_GND_CORE@ -type pgpin -pin VSS     -instanceBasename * -hie
 globalNetConnect @IV_PWR_CORE@ -type tiehi
 globalNetConnect @IV_GND_CORE@ -type tielo
 
+
+placeInstance sram 510 34 R0 -placed 
 
 ### Power Ring Creation
 setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0    \
