@@ -166,7 +166,8 @@ module DPE
     //flatten regs into DATAoutp for scanchain
     genvar ii;
     for (ii = 0; ii < N_LOCAL_REGS; ii++) begin
-        assign DATAoutp[ii*WIDTH +: WIDTH] = regs[ii];
+        // assign DATAoutp[ii*WIDTH +: WIDTH] = regs[ii];
+        assign DATAoutp[WIDTH*(ii+1)-1:WIDTH*ii] = regs[ii];
     end
 
     always_ff @(posedge CLK) begin
