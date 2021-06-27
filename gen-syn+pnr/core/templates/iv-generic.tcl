@@ -65,32 +65,42 @@ read_sdf @DES_GEN_DIR@/@TOP_LEVEL_DESIGN@_compiled.sdf
 # floorPlan -site CORE_SITE -r $AspectRatio $Density $Margin $Margin $Margin $Margin
 # floorPlan -site CoreSite -r 0.8 0.7 10 10 10 10 -noResize
 # floorPlan -site CoreSite -d 50 50 15 15 15 15 -adjustToSite
-floorPlan -site CoreSite -r @IV_DES_ASPECT@ @IV_DES_DENSITY@ @IV_DES_MARGIN_LEFT@ @IV_DES_MARGIN_BOT@ @IV_DES_MARGIN_RIGHT@ @IV_DES_MARGIN_TOP@ -noResize
+if {$env(IV_USE_DENSITY)} {
+  floorPlan -site CoreSite -r \
+  @IV_DES_ASPECT@ @IV_DES_DENSITY@ \
+  @IV_DES_MARGIN_LEFT@ @IV_DES_MARGIN_BOT@ \
+  @IV_DES_MARGIN_RIGHT@ @IV_DES_MARGIN_TOP@ \
+  -noResize
+} else {
+  floorPlan -site CoreSite -d \
+  $env(IV_DES_WIDTH) $env(IV_DES_HEIGHT) \
+  @IV_DES_MARGIN_LEFT@ @IV_DES_MARGIN_BOT@ \
+  @IV_DES_MARGIN_RIGHT@ @IV_DES_MARGIN_TOP@ \
+  -noResize
+}
 
 
 addHaloToBlock 14.28 14.28 14.28 14.28 -allBlock
 
 ### Move Pins
-# SPI left, UART top, scan x2 top,
-# scan x2 right, reset & clk right
-# Global Clock & Reset (right)
+set pinSpacing 38.08
 setPinAssignMode -pinEditInBatch true
 editPin -pinWidth 0.18 -pinDepth 0.34 -fixedPin 1 \
   -fixOverlap 1 -unit MICRON -spreadDirection clockwise \
-  -layer M2 -spreadType center -spacing 4.76 -side Top \
-  -snap TRACK -pin { \
+  -layer M2 -spreadType center -spacing $pinSpacing \
+  -side Top -snap TRACK -pin { \
     {scanIn} {scanOut} \
   }
 editPin -pinWidth 0.18 -pinDepth 0.34 -fixedPin 1 \
   -fixOverlap 1 -unit MICRON -spreadDirection clockwise \
-  -layer M2 -spreadType center -spacing 4.76 -side Right \
-  -snap TRACK -pin { \
+  -layer M2 -spreadType center -spacing $pinSpacing \
+  -side Right -snap TRACK -pin { \
     {CLK} {RESETn} {SC_EN} {SC_CLK} \
   }
 editPin -pinWidth 0.18 -pinDepth 0.34 -fixedPin 1 \
   -fixOverlap 1 -unit MICRON -spreadDirection clockwise \
-  -layer M2 -spreadType center -spacing 4.76 -side Left \
-  -snap TRACK -pin { \
+  -layer M2 -spreadType center -spacing $pinSpacing \
+  -side Left -snap TRACK -pin { \
     {o_SPI_MISO} {i_SPI_MOSI} {i_SPI_CS_n} {i_SPI_Clk} \
   }
 setPinAssignMode -pinEditInBatch false
@@ -129,8 +139,42 @@ globalNetConnect @IV_GND_CORE@ -type pgpin -pin VSS     -instanceBasename * -hie
 globalNetConnect @IV_PWR_CORE@ -type tiehi
 globalNetConnect @IV_GND_CORE@ -type tielo
 
-# placeInstance sram 519.86 38.08 R0 -placed 
-placeInstance sram 278.8 38.08 R0 -placed 
+### SRAM Pre-Placement
+#set SRAM_Y [expr {$env(IV_DES_HEIGHT) - $env(IV_SRAM_HEIGHT) - $env(IV_SRAM_PADY)}]
+#set SRAM_X $env(IV_SRAM_PADX)
+#set SRAM_Y $env(IV_SRAM_PADY)
+set SRAM_X [expr {$env(IV_DES_WIDTH) - $env(IV_SRAM_WIDTH) - $env(IV_SRAM_PADX)}]
+set SRAM_Y [expr {$env(IV_DES_HEIGHT) - $env(IV_SRAM_HEIGHT) - $env(IV_SRAM_PADY)}]
+puts "SRAM X & Y:"
+puts $SRAM_X
+puts $SRAM_Y
+placeInstance sram \
+  $SRAM_X $SRAM_Y \
+  R0 -placed 
+
+### Cut Routing Tracks
+# Cut around SRAM
+cutRow -area \
+  [expr {$SRAM_X - $env(IV_SRAM_MARGIN)}] \
+  [expr {$SRAM_Y - $env(IV_SRAM_MARGIN)}] \
+  $env(IV_DES_WIDTH) \
+  $env(IV_DES_HEIGHT)
+#cutRow -area \
+#  0 \
+#  0 \
+#  [expr {$SRAM_X + $env(IV_SRAM_WIDTH) + $env(IV_SRAM_MARGIN)}] \
+#  [expr {$SRAM_Y + $env(IV_SRAM_HEIGHT) + $env(IV_SRAM_MARGIN)}]
+# Constrain height
+cutRow -area \
+  0 \
+  0 \
+  $env(IV_DES_WIDTH) \
+  $env(IV_CUT_VERTICAL)
+cutRow -area \
+  0 \
+  [expr {$env(IV_DES_HEIGHT) - $env(IV_CUT_VERTICAL)}] \
+  $env(IV_DES_WIDTH) \
+  $env(IV_DES_HEIGHT)
 
 ### Power Ring Creation
 setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0    \
@@ -169,7 +213,8 @@ addStripe -switch_layer_over_obs false -snap_wire_center_to_grid None      \
         -start_from left -direction vertical -create_pins 1                \
         -block_ring_bottom_layer_limit M1 -padcore_ring_top_layer_limit BB \
         -padcore_ring_bottom_layer_limit M1 -block_ring_top_layer_limit BB \
-        -layer @IV_STRIPE_LAYER@ -nets {@IV_PWR_NETS@ @IV_GND_NETS@}
+        -layer @IV_STRIPE_LAYER@ -nets {@IV_PWR_NETS@ @IV_GND_NETS@} \
+        -stop_offset $env(IV_STRIPE_STOP)
 
 ### Power Routing
 setSrouteMode -viaConnectToShape { noshape stripe followpin } -targetNumber { 1 }
@@ -297,6 +342,8 @@ if {$env(DES_HAS_CLK)} {
 
 # *** CTS ***
 if {$env(DES_HAS_CLK)} {
+  setOptMode -maxLength $env(IV_MAX_ROUTE_LENGTH)
+
   optDesign -postCTS -incr
   optDesign -postCTS -incr -hold
 }
@@ -340,7 +387,8 @@ if {$env(DES_HAS_CLK)} {
   # Removed as options don't exist anymore
   # setOptMode -fixCap true -fixTran true -fixFanoutLoad true
   # setDelayCalMode -engine default -siAware true
-  setOptMode -fixFanoutLoad true
+  setOptMode -fixFanoutLoad true \
+    -maxLength $env(IV_MAX_ROUTE_LENGTH)
 
   setAnalysisMode -analysisType onChipVariation
   setAnalysisMode -cppr both
