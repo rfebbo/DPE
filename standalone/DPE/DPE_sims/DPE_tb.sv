@@ -29,6 +29,10 @@ module DPE_tb();
     //1Kb SRAM emulator 128x64
     logic [255:0][SRAM_WORD_LENGTH-1:0] ram;
 
+
+    //DPE local registers from scanout
+    logic [N_LOCAL_REGS-1:0][WIDTH-1:0] regs;
+
     int pc; //programming counter
 
     
@@ -177,11 +181,11 @@ module DPE_tb();
         ram[pc][3:0] = 'h5; //idle
         pc++;
 
-        // //test jmp
-        // ram[pc] = 0;
-        // ram[pc][3:0] = 'h3; //jmp
-        // ram[pc][4+:SRAM_ADDR_WIDTH] = 'h00; // where to jump in sram
-        // pc++;
+        //test jmp
+        ram[pc] = 0;
+        ram[pc][3:0] = 'h3; //jmp
+        ram[pc][4+:SRAM_ADDR_WIDTH] = pc; // where to jump in sram
+        pc++;
 
 
         //start actually scanning in the values that are in the ram variable over the scanchain
@@ -220,9 +224,15 @@ module DPE_tb();
 
 
         //let the program run on the dpe
-        #1200;
+        #12000;
 
         SC_EN = 1;
+        for (int i =0; i < N_LOCAL_REGS; i++) begin
+            for (int j = 0; j < WIDTH; j++) begin
+                regs[i][j] = scanOut;
+                #350;
+            end
+        end
         //test SPI send and receive
         // SendSingleByte(8'h00); //read code
         // SendSingleByte(8'h00); //0 //address we want to read (0 for rcv first byte)
@@ -235,6 +245,19 @@ module DPE_tb();
         // SendSingleByte(8'haa); //second byte
         // SendSingleByte(8'haa); //third byte
         // SendSingleByte(8'haa); //fourth byte
+
+
+        for (int i =0; i < N_LOCAL_REGS; i++) begin
+            if (regs[i] != dpe.regs[i]) begin
+                
+                $display("At %d %d is not %d", i, regs[i], dpe.regs[i]);
+            end
+        end
+
+        if (regs == dpe.regs) begin
+            
+            $display("equal");
+        end
 
         //run this tb for 740us 
         

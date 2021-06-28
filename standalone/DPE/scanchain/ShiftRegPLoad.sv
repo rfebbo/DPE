@@ -7,7 +7,7 @@ module ShiftRegPLoad #(parameter N=8) (
     input [N-1:0] pd,      // Declare input for parallel input data
     input ld,              // Declare input to load pd vector
     input rstn,            // Declare input to reset the register to a default value
-    output [N-1:0] out // Declare output to read out the current value of all flops in this register
+    output reg [N-1:0] out // Declare output to read out the current value of all flops in this register
   );
 
 
