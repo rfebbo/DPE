@@ -92,7 +92,7 @@ module DPE_tb();
         SC_CLK = 0;
         RESETn = 0;
         ram = 0;
-        SC_EN = 1;
+        SC_EN = 0;
         #350;
         RESETn = 1;
 
@@ -222,6 +222,7 @@ module DPE_tb();
         //let the program run on the dpe
         #1200;
 
+        SC_EN = 1;
         //test SPI send and receive
         // SendSingleByte(8'h00); //read code
         // SendSingleByte(8'h00); //0 //address we want to read (0 for rcv first byte)
