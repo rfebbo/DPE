@@ -68,8 +68,8 @@ module DPE_tb();
     .o_SPI_MOSI(w_SPI_MOSI)
     );
 
-    always #7 CLK = ~CLK;
-    always #175 SC_CLK = ~SC_CLK;
+    always #10 CLK = ~CLK;
+    always #250 SC_CLK = ~SC_CLK;
     // always #70 w_SPI_Clk = ~w_SPI_Clk;
 
     // always begin
@@ -97,7 +97,7 @@ module DPE_tb();
         RESETn = 0;
         ram = 0;
         SC_EN = 0;
-        #350;
+        #800;
         RESETn = 1;
 
         //set some memory
@@ -122,8 +122,8 @@ module DPE_tb();
         ram['h2c] = 'hFF060504;
         ram['h2d] = 'h03020100;
         ram['h2e] = 'hFF060504;
-        ram['h2f] = 'h03020100;
-        ram['h30] = 'hFF060504;
+        ram['h2f] = 'h0c020100;
+        ram['h30] = 'hFF090804;
         
         // for (int i = 'h23; i <= 'h30; i++) begin
         //     ram[i] = $random;
@@ -134,15 +134,15 @@ module DPE_tb();
         pc = 0;
         ram[pc] = 0;
         ram[pc][3:0] = 'h0; //ld
-        ram[pc][4+:SRAM_ADDR_WIDTH] = 'h020; //where from in ram
+        ram[pc][4+:SRAM_ADDR_WIDTH] = 'h20; //where from in ram
         ram[pc][4+SRAM_ADDR_WIDTH+:REG_ADDR_WIDTH] = 'h00; //where to in registers
         pc++;
 
         //read matrix: ld 21 thru 30 into 4 thru 40
-        for (int i = 0; i <= 16; i++) begin
+        for (int i = 0; i < 16; i++) begin
             ram[pc] = 0;
             ram[pc][3:0] = 'h0; //ld
-            ram[pc][4+:SRAM_ADDR_WIDTH] = 'h021+i; //where from in ram
+            ram[pc][4+:SRAM_ADDR_WIDTH] = 'h21+i; //where from in ram
             ram[pc][4+SRAM_ADDR_WIDTH+:REG_ADDR_WIDTH] = 'h04+(i*4); //where to in registers
             pc++;
             //not sure why this line does not work...
@@ -158,22 +158,32 @@ module DPE_tb();
         pc++;
 
         //rank outputs
-        ram[pc] = 0;
-        ram[pc][3:0] = 'h4; //rank
-        ram[pc][4+:REG_ADDR_WIDTH] = 'h44; // where in regs to rank (8*8*2 bits long)
-        ram[pc][4+REG_ADDR_WIDTH+:REG_ADDR_WIDTH] = 'h54; // where in regs to store rank
-        pc++;
+        // ram[pc] = 0;
+        // ram[pc][3:0] = 'h4; //rank
+        // ram[pc][4+:REG_ADDR_WIDTH] = 'h44; // where in regs to rank (8*8*2 bits long)
+        // ram[pc][4+REG_ADDR_WIDTH+:REG_ADDR_WIDTH] = 'h54; // where in regs to store rank
+        // pc++;
 
         //store rank to sram
         ram[pc] = 0;
         ram[pc][3:0] = 'h1; //store
         ram[pc][4+:SRAM_ADDR_WIDTH] = 'h31; // where in sram to store
-        ram[pc][4+SRAM_ADDR_WIDTH+:REG_ADDR_WIDTH] = 'h54; // where in regs store from
+        ram[pc][4+SRAM_ADDR_WIDTH+:REG_ADDR_WIDTH] = 'h44; // where in regs store from
         pc++;
         ram[pc] = 0;
         ram[pc][3:0] = 'h1; //store
         ram[pc][4+:SRAM_ADDR_WIDTH] = 'h32; // where in sram to store
-        ram[pc][4+SRAM_ADDR_WIDTH+:REG_ADDR_WIDTH] = 'h58; // where in regs store from
+        ram[pc][4+SRAM_ADDR_WIDTH+:REG_ADDR_WIDTH] = 'h48; // where in regs store from
+        pc++;
+        ram[pc] = 0;
+        ram[pc][3:0] = 'h1; //store
+        ram[pc][4+:SRAM_ADDR_WIDTH] = 'h33; // where in sram to store
+        ram[pc][4+SRAM_ADDR_WIDTH+:REG_ADDR_WIDTH] = 'h4c; // where in regs store from
+        pc++;
+        ram[pc] = 0;
+        ram[pc][3:0] = 'h1; //store
+        ram[pc][4+:SRAM_ADDR_WIDTH] = 'h34; // where in sram to store
+        ram[pc][4+SRAM_ADDR_WIDTH+:REG_ADDR_WIDTH] = 'h50; // where in regs store from
         pc++;
 
         //test idle for scanout
@@ -187,23 +197,24 @@ module DPE_tb();
         ram[pc][4+:SRAM_ADDR_WIDTH] = pc; // where to jump in sram
         pc++;
 
-
+        // #2450
+        SC_EN = 1;
         //start actually scanning in the values that are in the ram variable over the scanchain
         for (logic[SRAM_ADDR_WIDTH-1:0] i = 0; i <= 'h30; i++) begin
             for (int j = 0; j < SRAM_WORD_LENGTH; j++) begin
                 scanIn = ram[i][j]; // data
-                #350;
+                #500;
             end
             for (int j = 0; j < SRAM_ADDR_WIDTH; j++) begin
                 scanIn <= i[j]; //address
-                #350;
+                #500;
             end
 
             scanIn = 1;
             // SC_EN = 0;
-            #350;
+            #500;
             SC_EN = 0;
-            #350;
+            #500;
             SC_EN = 1;
 
         end
@@ -211,15 +222,15 @@ module DPE_tb();
         //send FFFFFFFFFF signal to DPE to signify the end of INIT
         for (int j = 0; j < SRAM_WORD_LENGTH; j++) begin
             scanIn = 1;
-            #350;
+            #500;
         end
         for (int j = 0; j < SRAM_ADDR_WIDTH; j++) begin
             scanIn <= 1;
-            #350;
+            #500;
         end
         scanIn = 1;
         SC_EN = 0;
-        #350;
+        #500;
         // SC_EN = 1;
 
 
@@ -230,15 +241,16 @@ module DPE_tb();
         for (int i =0; i < N_LOCAL_REGS; i++) begin
             for (int j = 0; j < WIDTH; j++) begin
                 regs[i][j] = scanOut;
-                #350;
+                #500;
             end
         end
         //test SPI send and receive
         // SendSingleByte(8'h00); //read code
-        // SendSingleByte(8'h00); //0 //address we want to read (0 for rcv first byte)
-        // SendSingleByte(8'h00); //1 rcv second byte
-        // SendSingleByte(8'h00); //2 rcv third byte
-        // SendSingleByte(8'h00); //3 rcv fourth byte
+        // SendSingleByte(8'h11); //0 //address we want to read (0 for rcv first byte)
+        // SendSingleByte(8'h11); //1 rcv second byte
+        // SendSingleByte(8'h11); //2 rcv third byte
+        // SendSingleByte(8'h11); //3 rcv fourth byte
+        // SendSingleByte(8'h11); //3 rcv fourth byte
         // SendSingleByte(8'h01); //write code
         // SendSingleByte(8'h21); //address to write
         // SendSingleByte(8'haa); //first byte

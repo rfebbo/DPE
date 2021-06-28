@@ -36,10 +36,10 @@ module DPE
             );
 
     //scan chain signals
-    wire [SC_DPE_IN_WIDTH:0]DATA; // Circuit EN (1-bit) + 32 bits per sram word + 8 bits per sram address
-    wire [SC_DPE_IN_WIDTH-1:0]DATAinp;
-    wire [SC_DPE_OUT_WIDTH-1:0]DATAoutp; //the entire register stack 1024 bits
-    wire [SC_DPE_OUT_WIDTH-1:0]DATAout;
+    logic [SC_DPE_IN_WIDTH:0]DATA; // Circuit EN (1-bit) + 32 bits per sram word + 8 bits per sram address
+    logic [SC_DPE_IN_WIDTH-1:0]DATAinp;
+    logic [SC_DPE_OUT_WIDTH-1:0]DATAoutp; //the entire register stack 1024 bits
+    logic [SC_DPE_OUT_WIDTH-1:0]DATAout;
     wire EN;
     wire ParEN;    
     
@@ -58,8 +58,8 @@ module DPE
 
     assign scanOut = DATAout[0];
 
-    logic [SRAM_WORD_LENGTH-1:0] data_in; //data read from sram
-    logic [SRAM_WORD_LENGTH-1:0] data_out; //data write to sram
+    logic [SRAM_WORD_LENGTH-1:0] data_in; //data write to sram
+    logic [SRAM_WORD_LENGTH-1:0] data_out; //data read from sram
     logic [SRAM_ADDR_WIDTH-1:0] addr;
     logic write_en;
     logic sense_enb;
@@ -178,24 +178,59 @@ module DPE
 
         if(~RESETn) begin
             //reset state machines
+            //spi
             tx_state <= tx_wait;
             rx_state <= rx_wait;
+            //cpu
             s <= INIT;
+            // inst <= IDLE;
+            //fetch
             f_state <= fe_enable;
+            //load
             l_state <= ld_enable;
+            ld_addr <= 0;
+            ld_reg_addr <= 0;
+            //store
             s_state <= st_enable;
+            st_addr <= 0;
+            st_reg_addr <= 0;
+            //mul
             m_state <= set;
+            spike_reg_addr <= 0;
+            mat_reg_addr <= 0;
+            res_reg_addr <= 0;
+            m_spikes <= 0;
+            m_matrix <= 0;
+            //jmp
+            jmp_addr <= 0;
+
+            //rank
             r_state <= copy;
+
             //reset program counter
             pc <= 0;
             //reset regs
             regs <= 0;
+
+            //reset spi
             TX <= 0;
             RX <= 0;
-            // i_TX_Byte <= 'hF5;
-            // i_TX_DV <= 1;
+            i_TX_Byte <= 0;
             TX_idx <= 0;
             RX_idx <= 0;
+            i_TX_DV <= 0;
+            data_TX <= 0;
+            data_RX <= 0;
+            addr_tmp <= 0;
+
+            //reset sram
+            addr <= 0;
+            data_in <= 0;
+
+            //reset scanshain
+            // DATAoutp <= 0; //already done when regs is set to 0?
+            // DATA <= 0;
+
         end
         else if(o_RX_DV && ~TX && ~RX) begin
             addr_tmp <= addr;

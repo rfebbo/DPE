@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-`include "DPE_params.sv"
+`include "../DPE_params.sv"
 
 
 //multiply spike vector of 8 bits with 8x8 matrix and sum column
