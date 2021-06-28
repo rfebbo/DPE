@@ -224,7 +224,7 @@ module DPE_tb();
 
 
         //let the program run on the dpe
-        #12000;
+        #24000;
 
         SC_EN = 1;
         for (int i =0; i < N_LOCAL_REGS; i++) begin
@@ -247,17 +247,17 @@ module DPE_tb();
         // SendSingleByte(8'haa); //fourth byte
 
 
-        for (int i =0; i < N_LOCAL_REGS; i++) begin
-            if (regs[i] != dpe.regs[i]) begin
+        // for (int i =0; i < N_LOCAL_REGS; i++) begin
+        //     if (regs[i] != dpe.regs[i]) begin
                 
-                $display("At %d %d is not %d", i, regs[i], dpe.regs[i]);
-            end
-        end
+        //         $display("At %d %d is not %d", i, regs[i], dpe.regs[i]);
+        //     end
+        // end
 
-        if (regs == dpe.regs) begin
+        // if (regs == dpe.regs) begin
             
-            $display("equal");
-        end
+        //     $display("equal");
+        // end
 
         //run this tb for 740us 
         
