@@ -172,11 +172,16 @@ module DPE_tb();
         ram[pc][4+SRAM_ADDR_WIDTH+:REG_ADDR_WIDTH] = 'h58; // where in regs store from
         pc++;
 
-        //test jmp
+        //test idle for scanout
         ram[pc] = 0;
-        ram[pc][3:0] = 'h3; //jmp
-        ram[pc][4+:SRAM_ADDR_WIDTH] = 'h00; // where to jump in sram
+        ram[pc][3:0] = 'h5; //idle
         pc++;
+
+        // //test jmp
+        // ram[pc] = 0;
+        // ram[pc][3:0] = 'h3; //jmp
+        // ram[pc][4+:SRAM_ADDR_WIDTH] = 'h00; // where to jump in sram
+        // pc++;
 
 
         //start actually scanning in the values that are in the ram variable over the scanchain
@@ -211,24 +216,24 @@ module DPE_tb();
         scanIn = 1;
         SC_EN = 0;
         #350;
-        SC_EN = 1;
+        // SC_EN = 1;
 
 
         //let the program run on the dpe
         #1200;
 
         //test SPI send and receive
-        SendSingleByte(8'h00); //read code
-        SendSingleByte(8'h00); //0 //address we want to read (0 for rcv first byte)
-        SendSingleByte(8'h00); //1 rcv second byte
-        SendSingleByte(8'h00); //2 rcv third byte
-        SendSingleByte(8'h00); //3 rcv fourth byte
-        SendSingleByte(8'h01); //write code
-        SendSingleByte(8'h21); //address to write
-        SendSingleByte(8'haa); //first byte
-        SendSingleByte(8'haa); //second byte
-        SendSingleByte(8'haa); //third byte
-        SendSingleByte(8'haa); //fourth byte
+        // SendSingleByte(8'h00); //read code
+        // SendSingleByte(8'h00); //0 //address we want to read (0 for rcv first byte)
+        // SendSingleByte(8'h00); //1 rcv second byte
+        // SendSingleByte(8'h00); //2 rcv third byte
+        // SendSingleByte(8'h00); //3 rcv fourth byte
+        // SendSingleByte(8'h01); //write code
+        // SendSingleByte(8'h21); //address to write
+        // SendSingleByte(8'haa); //first byte
+        // SendSingleByte(8'haa); //second byte
+        // SendSingleByte(8'haa); //third byte
+        // SendSingleByte(8'haa); //fourth byte
 
         //run this tb for 740us 
         
