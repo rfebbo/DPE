@@ -392,8 +392,8 @@ if {$env(DES_HAS_CLK)} {
 
   setAnalysisMode -analysisType onChipVariation
   setAnalysisMode -cppr both
-  optDesign -postRoute -incr
-  optDesign -postRoute -incr -hold
+  optDesign -postRoute
+  optDesign -postRoute -hold
 }
 
 

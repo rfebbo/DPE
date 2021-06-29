@@ -99,10 +99,10 @@ verbose_print()
 # Clean a lot of stuff, probably more than desired in some cases.
 if [[ "${CLEAN_GEN}" -eq "1" ]] ; then
   # ***Completely*** delete ${GEN_DIR}
-  rm -rf "${GEN_DIR}"
+  #rm -rf "${GEN_DIR}"
   # Clean out any extraneous files in WORK_DIR
   sh "${WORK_DIR}/cleanup.sh"
-  rm -f "${WORK_DIR}/"*.v "${WORK_DIR}/"*.gds "${WORK_DIR}/"*.mmc
+  #rm -f "${WORK_DIR}/"*.v "${WORK_DIR}/"*.gds "${WORK_DIR}/"*.mmc
 fi
 
 
