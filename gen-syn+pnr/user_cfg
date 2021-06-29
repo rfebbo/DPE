@@ -60,14 +60,14 @@ export IV_USE_DENSITY="0"
 export IV_DES_ASPECT="0.8"
 export IV_DES_DENSITY="0.9"
 export IV_DES_WIDTH="761.6"
-export IV_DES_HEIGHT="761.6"
+export IV_DES_HEIGHT="742.56"
 # Margin around design for rings, etc.
 # MAKE SURE THIS is > ((# pwr nets + # gnd nets) x IV_*_RING_WIDTH + IV_*_RING_SPACE + IV_*_RING_OFFSET)
 export IV_DES_MARGIN_LEFT="19.04"
 export IV_DES_MARGIN_BOT="19.04"
 export IV_DES_MARGIN_RIGHT="19.04"
 export IV_DES_MARGIN_TOP="19.04"
-export IV_MAX_ROUTE_LENGTH="40"
+export IV_MAX_ROUTE_LENGTH="45"
 
 # All power/ground nets
 export IV_PWR_NETS="vdd!"
