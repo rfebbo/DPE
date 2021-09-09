@@ -1,6 +1,6 @@
 `include "DPE_params.sv"
 
-
+//comment
 
 typedef enum logic [3:0] {LD, ST, MUL, JMP, RANK, IDLE} instruction;
 
